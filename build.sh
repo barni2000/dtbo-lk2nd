@@ -9,3 +9,5 @@ dtc -O dtb -o sdm429-lenovo-tbx505x.dtbo -b 0 -@ sdm429-lenovo-tbx505x.dts
 mkdtboimg cfg_create dtbo-lenovo-tbx505x.img dtboimg-lenovo-tbx505x.cfg
 dtc -O dtb -o sdm429-fossil-hoki.dtbo -b 0 -@ sdm429-fossil-hoki.dts
 mkdtboimg cfg_create dtbo-fossil-hoki.img dtboimg-fossil-hoki.cfg
+dtc -O dtb -o sdm439-nokia-panther.dtbo -b 0 -@ sdm439-nokia-panther.dts
+mkdtboimg cfg_create dtbo-nokia-panther.img dtboimg-nokia-panther.cfg
