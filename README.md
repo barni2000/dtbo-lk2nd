@@ -4,6 +4,7 @@ Supported devices:
 
 - Redmi 7 (xiaomi-onclite).
 - Redmi 7A (xiaomi-pine)
+- Redmi 8 (xiaomi-olive)
 - Lenovo Tab M10 HD (lenovo-tbx505x)
 - Fossil Gen 6 (fossil-hoki)
 - HMD Global Nokia 4.2 (nokia-panther)
