@@ -9,6 +9,7 @@ Supported devices:
 - Fossil Gen 6 (fossil-hoki)
 - HMD Global Nokia 4.2 (nokia-panther)
 - Motorola Moto G7 Power (motorola-ocean)
+- Oppo Realme 2/C1 (oppo-rmx1805)
 
 Used for lk2nd and mainline kernel.
 
