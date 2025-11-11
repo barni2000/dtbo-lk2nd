@@ -8,6 +8,7 @@ Supported devices:
 - Lenovo Tab M10 HD (lenovo-tbx505x)
 - Fossil Gen 6 (fossil-hoki)
 - HMD Global Nokia 4.2 (nokia-panther)
+- Motorola Moto G7 Power (motorola-ocean)
 
 Used for lk2nd and mainline kernel.
 
