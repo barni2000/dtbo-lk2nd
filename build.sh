@@ -13,7 +13,11 @@ dtc -O dtb -o sdm429-fossil-hoki.dtbo -b 0 -@ sdm429-fossil-hoki.dts
 mkdtboimg cfg_create dtbo-fossil-hoki.img dtboimg-fossil-hoki.cfg
 dtc -O dtb -o sdm439-nokia-panther.dtbo -b 0 -@ sdm439-nokia-panther.dts
 mkdtboimg cfg_create dtbo-nokia-panther.img dtboimg-nokia-panther.cfg
-dtc -O dtb -o sdm632-motorola-ocean.dtbo -b 0 -@ sdm632-motorola-ocean.dts
+for region in na row; do
+  for model in dvt1a dvt1b dvt2 evt1 evt2 pvt1; do
+    dtc -O dtb -o sdm632-motorola-ocean/ocean-$region-$model.dtbo -b 0 -@ sdm632-motorola-ocean/ocean-$region-$model.dts
+  done
+done
 mkdtboimg cfg_create dtbo-motorola-ocean.img dtboimg-motorola-ocean.cfg
 dtc -O dtb -o sdm450-oppo-rmx1805.dtbo -b 0 -@ sdm450-oppo-rmx1805.dts
 mkdtboimg cfg_create dtbo-oppo-rmx1805.img dtboimg-oppo-rmx1805.cfg
