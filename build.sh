@@ -13,6 +13,10 @@ dtc -O dtb -o sdm429-fossil-hoki.dtbo -b 0 -@ sdm429-fossil-hoki.dts
 mkdtboimg cfg_create dtbo-fossil-hoki.img dtboimg-fossil-hoki.cfg
 dtc -O dtb -o sdm439-nokia-panther.dtbo -b 0 -@ sdm439-nokia-panther.dts
 mkdtboimg cfg_create dtbo-nokia-panther.img dtboimg-nokia-panther.cfg
+for model in dvt2 evt na-dvt1b na-evt pvt pvta pvtb pvtc tmo-dvt; do
+    dtc -O dtb -o sdm632-motorola-channel/channel-$model.dtbo -b 0 -@ sdm632-motorola-channel/channel-$model.dts
+done
+mkdtboimg cfg_create dtbo-motorola-channel.img dtboimg-motorola-channel.cfg
 for region in na row; do
   for model in dvt1a dvt1b dvt2 evt1 evt2 pvt1; do
     dtc -O dtb -o sdm632-motorola-ocean/ocean-$region-$model.dtbo -b 0 -@ sdm632-motorola-ocean/ocean-$region-$model.dts
