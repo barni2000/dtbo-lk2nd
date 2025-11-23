@@ -1,0 +1,8 @@
+/dts-v1/;
+
+/ {
+	qcom,board-id = <0x42 0xb1a0>;
+	model = "ocean";
+
+	__fixups__ {};
+};
