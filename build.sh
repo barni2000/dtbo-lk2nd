@@ -19,5 +19,9 @@ for region in na row; do
   done
 done
 mkdtboimg cfg_create dtbo-motorola-ocean.img dtboimg-motorola-ocean.cfg
+for model in dvt1b evt evt2 na-evt na-evt2; do
+    dtc -O dtb -o sdm632-motorola-river/river-$model.dtbo -b 0 -@ sdm632-motorola-river/river-$model.dts
+done
+mkdtboimg cfg_create dtbo-motorola-river.img dtboimg-motorola-river.cfg
 dtc -O dtb -o sdm450-oppo-rmx1805.dtbo -b 0 -@ sdm450-oppo-rmx1805.dts
 mkdtboimg cfg_create dtbo-oppo-rmx1805.img dtboimg-oppo-rmx1805.cfg
