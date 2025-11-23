@@ -1,0 +1,8 @@
+/dts-v1/;
+
+/ {
+	qcom,board-id = <0x45 0xa200>;
+	model = "river";
+
+	__fixups__ {};
+};

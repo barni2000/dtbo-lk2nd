@@ -1,0 +1,8 @@
+/dts-v1/;
+
+/ {
+	qcom,board-id = <0x4a 0xcb00>;
+	model = "channel";
+
+	__fixups__ {};
+};
