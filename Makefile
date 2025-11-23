@@ -8,6 +8,7 @@ DTBO_IMAGE := $(patsubst dtboimg-%.cfg,dtbo-%.img,$(DTBO_CONFIG))
 
 all: $(DTBO) $(DTBO_IMAGE)
 
+.PHONY: clean
 clean:
 	rm $(OUT)/*.dtbo
 	rm $(OUT)/*.img
