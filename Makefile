@@ -1,21 +1,22 @@
 DTC := dtc
 MKDTBOIMG := mkdtboimg
 OUT := build
-DTS := $(wildcard *.dts)
-DTBO := $(patsubst %.dts,%.dtbo,$(DTS))
+DTS := $(wildcard *.dts **/*.dts)
+DTBO := $(patsubst %.dts,$(OUT)/%.dtbo,$(DTS))
 DTBO_CONFIG := $(wildcard *.cfg)
-DTBO_IMAGE := $(patsubst dtboimg-%.cfg,dtbo-%.img,$(DTBO_CONFIG))
+DTBO_IMAGE := $(patsubst dtboimg-%.cfg,$(OUT)/dtbo-%.img,$(DTBO_CONFIG))
 
 all: $(DTBO) $(DTBO_IMAGE)
 
 .PHONY: clean
 clean:
-	rm $(OUT)/*.dtbo
+	rm $(OUT)/**/*.dtbo $(OUT)/*.dtbo
 	rm $(OUT)/*.img
+	rmdir $(OUT)/*
 
-%.dtbo: %.dts
-	mkdir -p $(OUT)
-	$(DTC) -O dtb -o $(OUT)/$@ -b 0 -@ $^
+$(OUT)/%.dtbo: %.dts
+	mkdir -p $(dir $@)
+	$(DTC) -O dtb -o $@ -b 0 -@ $^
 
-dtbo-%.img: dtboimg-%.cfg
-	$(MKDTBOIMG) cfg_create $(OUT)/$@ $^
+$(OUT)/dtbo-%.img: dtboimg-%.cfg
+	$(MKDTBOIMG) cfg_create $@ $^
