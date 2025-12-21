@@ -10,9 +10,8 @@ all: $(DTBO) $(DTBO_IMAGE)
 
 .PHONY: clean
 clean:
-	rm $(OUT)/**/*.dtbo $(OUT)/*.dtbo
-	rm $(OUT)/*.img
-	rmdir $(OUT)/*
+	-rm $(OUT)/**/*.dtbo $(OUT)/*.dtbo $(OUT)/*.img
+	-rmdir $(OUT)/*
 
 $(OUT)/%.dtbo: %.dts
 	mkdir -p $(dir $@)
