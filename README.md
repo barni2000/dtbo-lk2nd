@@ -12,6 +12,7 @@ Supported devices:
 - Motorola Moto G7 Power (motorola-ocean)
 - Motorola Moto G7 Play (motorola-channel)
 - Oppo Realme 2/C1 (oppo-rmx1805)
+- Samsung Galaxy Tab A7 10.4 2020 (samsung-gta4l)
 
 Used for lk2nd and mainline kernel.
 
