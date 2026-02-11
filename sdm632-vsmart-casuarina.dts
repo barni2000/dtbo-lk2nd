@@ -1,0 +1,7 @@
+/dts-v1/;
+
+/ {
+	qcom,board-id = <0x0b 0x01>;
+
+	__fixups__ {};
+};
